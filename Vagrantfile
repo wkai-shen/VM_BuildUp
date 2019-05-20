@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	end
 	
 	config.vm.define :loadbalancer do |instance|
-		instance.vm.synced_folder "../vagrant_syn_content/", "/vagrant_syn_content"
+		instance.vm.synced_folder "../vagrant_syn_content/docker-nignx", "/vagrant_syn_content/docker-nignx"
 	
 		# Install docker and its dependencies by Shell provisioning.
 		# We can test our provision changes by vagrant provision command. Otherwise, only the initial vagrant up will run provision.
